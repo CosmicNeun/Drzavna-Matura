@@ -52,6 +52,7 @@
             label5 = new Label();
             label1 = new Label();
             tabPage2 = new TabPage();
+            dataGridViewProfil = new DataGridView();
             buttonprofilsacuvaj = new Button();
             buttonprofilobrisi = new Button();
             label13 = new Label();
@@ -70,6 +71,7 @@
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUcenici).BeginInit();
             tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewProfil).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -154,7 +156,7 @@
             // 
             // buttonobrisi
             // 
-            buttonobrisi.Location = new Point(491, 213);
+            buttonobrisi.Location = new Point(613, 235);
             buttonobrisi.Name = "buttonobrisi";
             buttonobrisi.Size = new Size(103, 40);
             buttonobrisi.TabIndex = 18;
@@ -191,7 +193,7 @@
             // 
             // buttonsacuvaj
             // 
-            buttonsacuvaj.Location = new Point(601, 213);
+            buttonsacuvaj.Location = new Point(723, 235);
             buttonsacuvaj.Name = "buttonsacuvaj";
             buttonsacuvaj.Size = new Size(103, 40);
             buttonsacuvaj.TabIndex = 14;
@@ -302,6 +304,7 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(dataGridViewProfil);
             tabPage2.Controls.Add(buttonprofilsacuvaj);
             tabPage2.Controls.Add(buttonprofilobrisi);
             tabPage2.Controls.Add(label13);
@@ -324,9 +327,21 @@
             tabPage2.Text = "Učenik";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // dataGridViewProfil
+            // 
+            dataGridViewProfil.AllowUserToAddRows = false;
+            dataGridViewProfil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewProfil.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewProfil.Location = new Point(50, 280);
+            dataGridViewProfil.Name = "dataGridViewProfil";
+            dataGridViewProfil.ReadOnly = true;
+            dataGridViewProfil.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewProfil.Size = new Size(775, 170);
+            dataGridViewProfil.TabIndex = 27;
+            // 
             // buttonprofilsacuvaj
             // 
-            buttonprofilsacuvaj.Location = new Point(609, 291);
+            buttonprofilsacuvaj.Location = new Point(722, 217);
             buttonprofilsacuvaj.Name = "buttonprofilsacuvaj";
             buttonprofilsacuvaj.Size = new Size(103, 40);
             buttonprofilsacuvaj.TabIndex = 26;
@@ -336,7 +351,7 @@
             // 
             // buttonprofilobrisi
             // 
-            buttonprofilobrisi.Location = new Point(500, 291);
+            buttonprofilobrisi.Location = new Point(613, 217);
             buttonprofilobrisi.Name = "buttonprofilobrisi";
             buttonprofilobrisi.Size = new Size(103, 40);
             buttonprofilobrisi.TabIndex = 25;
@@ -347,7 +362,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(48, 239);
+            label13.Location = new Point(50, 208);
             label13.Name = "label13";
             label13.Size = new Size(84, 15);
             label13.TabIndex = 23;
@@ -356,7 +371,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(48, 210);
+            label14.Location = new Point(50, 179);
             label14.Name = "label14";
             label14.Size = new Size(75, 15);
             label14.TabIndex = 22;
@@ -365,7 +380,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(48, 268);
+            label15.Location = new Point(50, 237);
             label15.Name = "label15";
             label15.Size = new Size(79, 15);
             label15.TabIndex = 24;
@@ -374,7 +389,7 @@
             // comboBoxprofilnaziv2
             // 
             comboBoxprofilnaziv2.FormattingEnabled = true;
-            comboBoxprofilnaziv2.Location = new Point(145, 236);
+            comboBoxprofilnaziv2.Location = new Point(147, 205);
             comboBoxprofilnaziv2.Name = "comboBoxprofilnaziv2";
             comboBoxprofilnaziv2.Size = new Size(189, 23);
             comboBoxprofilnaziv2.TabIndex = 15;
@@ -382,7 +397,7 @@
             // comboBoxprofilnaziv3
             // 
             comboBoxprofilnaziv3.FormattingEnabled = true;
-            comboBoxprofilnaziv3.Location = new Point(145, 265);
+            comboBoxprofilnaziv3.Location = new Point(147, 234);
             comboBoxprofilnaziv3.Name = "comboBoxprofilnaziv3";
             comboBoxprofilnaziv3.Size = new Size(189, 23);
             comboBoxprofilnaziv3.TabIndex = 14;
@@ -390,7 +405,7 @@
             // comboBoxprofilnaziv1
             // 
             comboBoxprofilnaziv1.FormattingEnabled = true;
-            comboBoxprofilnaziv1.Location = new Point(145, 207);
+            comboBoxprofilnaziv1.Location = new Point(147, 176);
             comboBoxprofilnaziv1.Name = "comboBoxprofilnaziv1";
             comboBoxprofilnaziv1.Size = new Size(189, 23);
             comboBoxprofilnaziv1.TabIndex = 13;
@@ -398,7 +413,7 @@
             // labelprofilnaziv
             // 
             labelprofilnaziv.AutoSize = true;
-            labelprofilnaziv.Location = new Point(48, 59);
+            labelprofilnaziv.Location = new Point(50, 28);
             labelprofilnaziv.Name = "labelprofilnaziv";
             labelprofilnaziv.Size = new Size(73, 15);
             labelprofilnaziv.TabIndex = 12;
@@ -407,7 +422,7 @@
             // comboBoxprofiljezik
             // 
             comboBoxprofiljezik.FormattingEnabled = true;
-            comboBoxprofiljezik.Location = new Point(145, 138);
+            comboBoxprofiljezik.Location = new Point(147, 107);
             comboBoxprofiljezik.Name = "comboBoxprofiljezik";
             comboBoxprofiljezik.Size = new Size(189, 23);
             comboBoxprofiljezik.TabIndex = 11;
@@ -415,7 +430,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(48, 144);
+            label9.Location = new Point(50, 113);
             label9.Name = "label9";
             label9.Size = new Size(31, 15);
             label9.TabIndex = 10;
@@ -424,7 +439,7 @@
             // comboBoxprofiltip
             // 
             comboBoxprofiltip.FormattingEnabled = true;
-            comboBoxprofiltip.Location = new Point(145, 107);
+            comboBoxprofiltip.Location = new Point(147, 76);
             comboBoxprofiltip.Name = "comboBoxprofiltip";
             comboBoxprofiltip.Size = new Size(189, 23);
             comboBoxprofiltip.TabIndex = 9;
@@ -433,7 +448,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(48, 113);
+            label8.Location = new Point(50, 82);
             label8.Name = "label8";
             label8.Size = new Size(64, 15);
             label8.TabIndex = 8;
@@ -441,7 +456,7 @@
             // 
             // textBoxprofil
             // 
-            textBoxprofil.Location = new Point(145, 56);
+            textBoxprofil.Location = new Point(147, 25);
             textBoxprofil.Name = "textBoxprofil";
             textBoxprofil.Size = new Size(189, 23);
             textBoxprofil.TabIndex = 0;
@@ -461,6 +476,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridViewUcenici).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewProfil).EndInit();
             ResumeLayout(false);
         }
 
@@ -503,5 +519,6 @@
         private Button buttonprofilsacuvaj;
         private Button buttonprofilobrisi;
         private DataGridView dataGridViewUcenici;
+        private DataGridView dataGridViewProfil;
     }
 }

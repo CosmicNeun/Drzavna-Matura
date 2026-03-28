@@ -1,4 +1,5 @@
 ﻿using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using static WinFormsApp3.Form1;
 
 namespace WinFormsApp3
 {
@@ -58,7 +59,17 @@ namespace WinFormsApp3
                                                             "IV-7",
                                                             "IV-8",
                                                             "IV-9",
-                                                            "IV-10"});
+                                                            "IV-10",
+                                                            "III-1",
+                                                            "III-2",
+                                                            "III-3",
+                                                            "III-4",
+                                                            "III-5",
+                                                            "III-6",
+                                                            "III-7",
+                                                            "III-8",
+                                                            "III-9",
+                                                            "III-10"});
 
             comboBoxskola.Items.AddRange(new string[]
             {
@@ -137,6 +148,7 @@ namespace WinFormsApp3
                 }
             }
         }
+
         private void comboBoxtip_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBoxnaziv1.Items.Clear();
@@ -155,9 +167,7 @@ namespace WinFormsApp3
             comboBoxnaziv2.Enabled = true;
             comboBoxnaziv3.Enabled = true;
 
-            if (comboBoxtip.SelectedItem.ToString() == "Opšta")
-            {
-                comboBoxnaziv1.Items.AddRange(new string[] { "Srpski jezik i knjizevnost",
+            comboBoxnaziv1.Items.AddRange(new string[] { "Srpski jezik i knjizevnost",
                                                              "Albanski jezik i knjizevnost",
                                                              "Bosanski jezik i knjizevnost",
                                                              "Bugarski jezik i knjizevnost",
@@ -166,7 +176,10 @@ namespace WinFormsApp3
                                                              "Rusinski jezik i knjizevnost",
                                                              "Slovacki jezik i knjizevnost",
                                                              "Hrvatski jezik i knjizevnost"});
-                comboBoxnaziv2.Items.AddRange(new string[] { "Matematika" });
+            comboBoxnaziv2.Items.AddRange(new string[] { "Matematika" });
+
+            if (comboBoxtip.SelectedItem.ToString() == "Opšta")
+            {
                 comboBoxnaziv3.Items.AddRange(new string[] { "Biologija",
                                                              "Geografija",
                                                              "Engleski jezik",
@@ -182,16 +195,6 @@ namespace WinFormsApp3
             }
             else if (comboBoxtip.SelectedItem.ToString() == "Stručna")
             {
-                comboBoxnaziv1.Items.AddRange(new string[] { "Srpski jezik i knjizevnost",
-                                                             "Albanski jezik i knjizevnost",
-                                                             "Bosanski jezik i knjizevnost",
-                                                             "Bugarski jezik i knjizevnost",
-                                                             "Madjarski jezik i knjizevnost",
-                                                             "Rumunski jezik i knjizevnost",
-                                                             "Rusinski jezik i knjizevnost",
-                                                             "Slovacki jezik i knjizevnost",
-                                                             "Hrvatski jezik i knjizevnost"});
-                comboBoxnaziv2.Items.AddRange(new string[] { "Matematika" });
                 comboBoxnaziv3.Items.AddRange(new string[] { "Zootehnicar",
                                                             "Tehnicar za biotehnologiju",
                                                             "Tehnicar poljoprivredne tehnike",
@@ -248,18 +251,10 @@ namespace WinFormsApp3
                                                             "Sanitarno-ekoloski tehnicar",
                                                             "Scenski masker i vlasuljаr"});
             }
+
             else if (comboBoxtip.SelectedItem.ToString() == "Umetnička")
             {
-                comboBoxnaziv1.Items.AddRange(new string[] { "Srpski jezik i knjizevnost",
-                                                             "Albanski jezik i knjizevnost",
-                                                             "Bosanski jezik i knjizevnost",
-                                                             "Bugarski jezik i knjizevnost",
-                                                             "Madjarski jezik i knjizevnost",
-                                                             "Rumunski jezik i knjizevnost",
-                                                             "Rusinski jezik i knjizevnost",
-                                                             "Slovacki jezik i knjizevnost",
-                                                             "Hrvatski jezik i knjizevnost"});
-                comboBoxnaziv2.Items.AddRange(new string[] { "Matematika" });
+                
                 comboBoxnaziv3.Items.AddRange(new string[] { "Soleđo", "Harmonija" });
             }
         }
@@ -385,9 +380,7 @@ namespace WinFormsApp3
             comboBoxprofilnaziv2.Enabled = true;
             comboBoxprofilnaziv3.Enabled = true;
 
-            if (comboBoxprofiltip.SelectedItem.ToString() == "Opšta")
-            {
-                comboBoxprofilnaziv1.Items.AddRange(new string[] { "Srpski jezik i knjizevnost",
+            comboBoxprofilnaziv1.Items.AddRange(new string[] { "Srpski jezik i knjizevnost",
                                                              "Albanski jezik i knjizevnost",
                                                              "Bosanski jezik i knjizevnost",
                                                              "Bugarski jezik i knjizevnost",
@@ -396,7 +389,10 @@ namespace WinFormsApp3
                                                              "Rusinski jezik i knjizevnost",
                                                              "Slovacki jezik i knjizevnost",
                                                              "Hrvatski jezik i knjizevnost"});
-                comboBoxprofilnaziv2.Items.AddRange(new string[] { "Matematika" });
+            comboBoxprofilnaziv2.Items.AddRange(new string[] { "Matematika" });
+
+            if (comboBoxprofiltip.SelectedItem.ToString() == "Opšta")
+            {
                 comboBoxprofilnaziv3.Items.AddRange(new string[] { "Biologija",
                                                              "Geografija",
                                                              "Engleski jezik",
@@ -412,16 +408,6 @@ namespace WinFormsApp3
             }
             else if (comboBoxprofiltip.SelectedItem.ToString() == "Stručna")
             {
-                comboBoxprofilnaziv1.Items.AddRange(new string[] { "Srpski jezik i knjizevnost",
-                                                             "Albanski jezik i knjizevnost",
-                                                             "Bosanski jezik i knjizevnost",
-                                                             "Bugarski jezik i knjizevnost",
-                                                             "Madjarski jezik i knjizevnost",
-                                                             "Rumunski jezik i knjizevnost",
-                                                             "Rusinski jezik i knjizevnost",
-                                                             "Slovacki jezik i knjizevnost",
-                                                             "Hrvatski jezik i knjizevnost"});
-                comboBoxprofilnaziv2.Items.AddRange(new string[] { "Matematika" });
                 comboBoxprofilnaziv3.Items.AddRange(new string[] { "Zootehnicar",
                                                             "Tehnicar za biotehnologiju",
                                                             "Tehnicar poljoprivredne tehnike",
@@ -480,22 +466,26 @@ namespace WinFormsApp3
             }
             else if (comboBoxprofiltip.SelectedItem.ToString() == "Umetnička")
             {
-                comboBoxprofilnaziv1.Items.AddRange(new string[] { "Srpski jezik i knjizevnost",
-                                                             "Albanski jezik i knjizevnost",
-                                                             "Bosanski jezik i knjizevnost",
-                                                             "Bugarski jezik i knjizevnost",
-                                                             "Madjarski jezik i knjizevnost",
-                                                             "Rumunski jezik i knjizevnost",
-                                                             "Rusinski jezik i knjizevnost",
-                                                             "Slovacki jezik i knjizevnost",
-                                                             "Hrvatski jezik i knjizevnost"});
-                comboBoxprofilnaziv2.Items.AddRange(new string[] { "Matematika" });
                 comboBoxprofilnaziv3.Items.AddRange(new string[] { "Soleđo", "Harmonija" });
             }
         }
 
         private void buttonprofilobrisi_Click(object sender, EventArgs e)
         {
+            if (dataGridViewProfil.SelectedRows.Count > 0)
+            {
+                DataGridViewRow izabraniRed = dataGridViewProfil.SelectedRows[0];
+
+                if (izabraniRed.IsNewRow) return;
+
+                int selektovaniIndeks = izabraniRed.Index;
+                if (selektovaniIndeks < profili.Count)
+                {
+                    profili.RemoveAt(selektovaniIndeks);
+                }
+                dataGridViewProfil.Rows.RemoveAt(selektovaniIndeks);
+                Sacuvajp();
+            }
             textBoxprofil.Text = "";
             comboBoxprofiljezik.SelectedIndex = -1;
             comboBoxprofiltip.SelectedIndex = -1;
@@ -514,6 +504,7 @@ namespace WinFormsApp3
             profil.naziv2 = comboBoxprofilnaziv2.Text;
             profil.naziv3 = comboBoxprofilnaziv3.Text;
 
+            dataGridViewProfil.Rows.Add(profil.profil, profil.tip, profil.jezik, profil.naziv1, profil.naziv2, profil.naziv3);
             profili.Add(profil);
             Sacuvajp();
 
@@ -538,6 +529,37 @@ namespace WinFormsApp3
             dataGridViewUcenici.Columns[7].Name = "Drugi predmet";
             dataGridViewUcenici.Columns[8].Name = "Treći predmet";
 
+            dataGridViewProfil.ColumnCount = 6;
+            dataGridViewProfil.Columns[0].Name = "Naziv";
+            dataGridViewProfil.Columns[1].Name = "Tip mature";
+            dataGridViewProfil.Columns[2].Name = "Jezik";
+            dataGridViewProfil.Columns[3].Name = "Prvi predmet";
+            dataGridViewProfil.Columns[4].Name = "Drugi predmet";
+            dataGridViewProfil.Columns[5].Name = "Treći predmet";
+
+            if (File.Exists("profili.csv"))
+            {
+                string[] linije1 = File.ReadAllLines("profili.csv");
+
+                foreach (string linija1 in linije1)
+                {
+                    if (string.IsNullOrWhiteSpace(linija1)) continue;
+                    string[] podaci1 = linija1.Split(';');
+
+                    if (podaci1.Length == 6)
+                    {
+                        dataGridViewProfil.Rows.Add(podaci1);
+                        Profil p = new Profil();
+                        p.profil = podaci1[0];
+                        p.tip = podaci1[1];
+                        p.jezik = podaci1[2];
+                        p.naziv1 = podaci1[3];
+                        p.naziv2 = podaci1[4];
+                        p.naziv3 = podaci1[5];
+                        profili.Add(p);
+                    }
+                }
+            }
             if (File.Exists("ucenici.csv"))
             {
                 string[] linije = File.ReadAllLines("ucenici.csv");
@@ -582,6 +604,22 @@ namespace WinFormsApp3
                     comboBoxnaziv1.Text = izabraniRed.Cells[6].Value.ToString();
                     comboBoxnaziv2.Text = izabraniRed.Cells[7].Value.ToString();
                     comboBoxnaziv3.Text = izabraniRed.Cells[8].Value.ToString();
+                }
+            }
+        }
+        private void dataGridViewProfil_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewProfil.SelectedRows.Count > 0)
+            {
+                DataGridViewRow izabraniRed = dataGridViewUcenici.SelectedRows[0];
+                if (izabraniRed.Cells[0].Value != null)
+                {
+                    textBoxprofil.Text = izabraniRed.Cells[0].Value.ToString();
+                    comboBoxtip.Text = izabraniRed.Cells[1].Value.ToString();
+                    comboBoxjezik.Text = izabraniRed.Cells[2].Value.ToString();
+                    comboBoxnaziv1.Text = izabraniRed.Cells[3].Value.ToString();
+                    comboBoxnaziv2.Text = izabraniRed.Cells[4].Value.ToString();
+                    comboBoxnaziv3.Text = izabraniRed.Cells[5].Value.ToString();
                 }
             }
         }
