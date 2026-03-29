@@ -28,6 +28,7 @@ namespace WinFormsApp3
             comboBoxprofilnaziv1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxprofilnaziv2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxprofilnaziv3.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbIzaberiProfil.DropDownStyle = ComboBoxStyle.DropDownList;
 
 
             comboBoxjezik.Items.AddRange(new string[] { "Srpski jezik",
@@ -155,7 +156,7 @@ namespace WinFormsApp3
             comboBoxnaziv2.Items.Clear();
             comboBoxnaziv3.Items.Clear();
 
-            if (comboBoxtip.SelectedItem == null) 
+            if (comboBoxtip.SelectedItem == null)
             {
                 comboBoxnaziv1.Enabled = false;
                 comboBoxnaziv2.Enabled = false;
@@ -254,7 +255,7 @@ namespace WinFormsApp3
 
             else if (comboBoxtip.SelectedItem.ToString() == "Umetnička")
             {
-                
+
                 comboBoxnaziv3.Items.AddRange(new string[] { "Soleđo", "Harmonija" });
             }
         }
@@ -337,7 +338,7 @@ namespace WinFormsApp3
         private void buttonobrisi_Click(object sender, EventArgs e)
         {
 
-            if(dataGridViewUcenici.SelectedRows.Count > 0)
+            if (dataGridViewUcenici.SelectedRows.Count > 0)
             {
                 DataGridViewRow izabraniRed = dataGridViewUcenici.SelectedRows[0];
 
@@ -671,7 +672,7 @@ namespace WinFormsApp3
         {
             if (dataGridViewProfil.SelectedRows.Count > 0)
             {
-                DataGridViewRow izabraniRed = dataGridViewUcenici.SelectedRows[0];
+                DataGridViewRow izabraniRed = dataGridViewProfil.SelectedRows[0];
                 if (izabraniRed.Cells[0].Value != null)
                 {
                     textBoxprofil.Text = izabraniRed.Cells[0].Value.ToString();
@@ -681,6 +682,14 @@ namespace WinFormsApp3
                     comboBoxnaziv2.Text = izabraniRed.Cells[4].Value.ToString();
                     comboBoxnaziv3.Text = izabraniRed.Cells[5].Value.ToString();
                 }
+            }
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0)
+            {
+                OsveziComboBoxProfila();
             }
         }
     }

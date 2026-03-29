@@ -30,6 +30,7 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            cmbIzaberiProfil = new ComboBox();
             labelizaberiprofil = new Label();
             dataGridViewUcenici = new DataGridView();
             label6 = new Label();
@@ -68,7 +69,6 @@
             comboBoxprofiltip = new ComboBox();
             label8 = new Label();
             textBoxprofil = new TextBox();
-            cmbIzaberiProfil = new ComboBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUcenici).BeginInit();
@@ -85,6 +85,7 @@
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(888, 498);
             tabControl1.TabIndex = 12;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // tabPage1
             // 
@@ -116,8 +117,17 @@
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(880, 470);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "Škola";
+            tabPage1.Text = "Učenik";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cmbIzaberiProfil
+            // 
+            cmbIzaberiProfil.FormattingEnabled = true;
+            cmbIzaberiProfil.Location = new Point(486, 128);
+            cmbIzaberiProfil.Name = "cmbIzaberiProfil";
+            cmbIzaberiProfil.Size = new Size(198, 23);
+            cmbIzaberiProfil.TabIndex = 23;
+            cmbIzaberiProfil.SelectedIndexChanged += cmbIzaberiProfil_SelectedIndexChanged;
             // 
             // labelizaberiprofil
             // 
@@ -337,7 +347,7 @@
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(880, 470);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Učenik";
+            tabPage2.Text = "Profil";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridViewProfil
@@ -351,6 +361,7 @@
             dataGridViewProfil.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewProfil.Size = new Size(775, 170);
             dataGridViewProfil.TabIndex = 27;
+            dataGridViewProfil.SelectionChanged += dataGridViewProfil_SelectionChanged;
             // 
             // buttonprofilsacuvaj
             // 
@@ -473,14 +484,6 @@
             textBoxprofil.Name = "textBoxprofil";
             textBoxprofil.Size = new Size(189, 23);
             textBoxprofil.TabIndex = 0;
-            // 
-            // cmbIzaberiProfil
-            // 
-            cmbIzaberiProfil.FormattingEnabled = true;
-            cmbIzaberiProfil.Location = new Point(486, 128);
-            cmbIzaberiProfil.Name = "cmbIzaberiProfil";
-            cmbIzaberiProfil.Size = new Size(198, 23);
-            cmbIzaberiProfil.TabIndex = 23;
             // 
             // Form1
             // 
