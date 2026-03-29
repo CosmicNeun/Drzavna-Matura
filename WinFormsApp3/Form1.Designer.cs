@@ -30,6 +30,7 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            labelizaberiprofil = new Label();
             dataGridViewUcenici = new DataGridView();
             label6 = new Label();
             label11 = new Label();
@@ -67,6 +68,7 @@
             comboBoxprofiltip = new ComboBox();
             label8 = new Label();
             textBoxprofil = new TextBox();
+            cmbIzaberiProfil = new ComboBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUcenici).BeginInit();
@@ -86,6 +88,8 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(cmbIzaberiProfil);
+            tabPage1.Controls.Add(labelizaberiprofil);
             tabPage1.Controls.Add(dataGridViewUcenici);
             tabPage1.Controls.Add(label6);
             tabPage1.Controls.Add(label11);
@@ -114,6 +118,15 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Škola";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // labelizaberiprofil
+            // 
+            labelizaberiprofil.AutoSize = true;
+            labelizaberiprofil.Location = new Point(423, 131);
+            labelizaberiprofil.Name = "labelizaberiprofil";
+            labelizaberiprofil.Size = new Size(35, 15);
+            labelizaberiprofil.TabIndex = 22;
+            labelizaberiprofil.Text = "Profil";
             // 
             // dataGridViewUcenici
             // 
@@ -461,6 +474,14 @@
             textBoxprofil.Size = new Size(189, 23);
             textBoxprofil.TabIndex = 0;
             // 
+            // cmbIzaberiProfil
+            // 
+            cmbIzaberiProfil.FormattingEnabled = true;
+            cmbIzaberiProfil.Location = new Point(486, 128);
+            cmbIzaberiProfil.Name = "cmbIzaberiProfil";
+            cmbIzaberiProfil.Size = new Size(198, 23);
+            cmbIzaberiProfil.TabIndex = 23;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -520,5 +541,7 @@
         private Button buttonprofilobrisi;
         private DataGridView dataGridViewUcenici;
         private DataGridView dataGridViewProfil;
+        private Label labelizaberiprofil;
+        private ComboBox cmbIzaberiProfil;
     }
 }

@@ -587,6 +587,7 @@ namespace WinFormsApp3
                     }
                 }
             }
+            OsveziComboBoxProfila();
         }
         private void dataGridViewUcenici_SelectionChanged(object sender, EventArgs e)
         {
@@ -604,6 +605,65 @@ namespace WinFormsApp3
                     comboBoxnaziv1.Text = izabraniRed.Cells[6].Value.ToString();
                     comboBoxnaziv2.Text = izabraniRed.Cells[7].Value.ToString();
                     comboBoxnaziv3.Text = izabraniRed.Cells[8].Value.ToString();
+                }
+            }
+        }
+
+        private void OsveziComboBoxProfila()
+        {
+            cmbIzaberiProfil.Items.Clear();
+
+            foreach (DataGridViewRow red in dataGridViewProfil.Rows)
+            {
+                string nazivProfila = red.Cells[0].Value?.ToString();
+
+                if (!string.IsNullOrWhiteSpace(nazivProfila))
+                {
+                    cmbIzaberiProfil.Items.Add(nazivProfila);
+                }
+            }
+        }
+        private void cmbIzaberiProfil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbIzaberiProfil.SelectedIndex == -1) return;
+
+            string izabraniProfil = cmbIzaberiProfil.SelectedItem.ToString();
+            foreach (DataGridViewRow row in dataGridViewProfil.Rows)
+            {
+                string trenutniProfil = row.Cells[0].Value?.ToString();
+                if (trenutniProfil == izabraniProfil)
+                {
+                    string tipmature = row.Cells["Tip mature"].Value?.ToString();
+
+                    if (!string.IsNullOrWhiteSpace(tipmature))
+                    {
+                        comboBoxtip.SelectedItem = tipmature;
+                    }
+                    string jezikmature = row.Cells["Jezik"].Value?.ToString();
+
+                    if (!string.IsNullOrWhiteSpace(jezikmature))
+                    {
+                        comboBoxtip.SelectedItem = jezikmature;
+                    }
+                    string prvimature = row.Cells["Prvi predmet"].Value?.ToString();
+
+                    if (!string.IsNullOrWhiteSpace(prvimature))
+                    {
+                        comboBoxtip.SelectedItem = prvimature;
+                    }
+                    string drugimature = row.Cells["Drugi predmet"].Value?.ToString();
+
+                    if (!string.IsNullOrWhiteSpace(drugimature))
+                    {
+                        comboBoxtip.SelectedItem = drugimature;
+                    }
+                    string trecimature = row.Cells["Treci predmet"].Value?.ToString();
+
+                    if (!string.IsNullOrWhiteSpace(trecimature))
+                    {
+                        comboBoxtip.SelectedItem = trecimature;
+                    }
+                    break;
                 }
             }
         }
