@@ -10,6 +10,7 @@ namespace WinFormsApp3
         public Form1()
         {
             InitializeComponent();
+            buttonSacuvajIzmenu.Enabled = false;
             comboBoxprofilnaziv1.Enabled = false;
             comboBoxprofilnaziv2.Enabled = false;
             comboBoxprofilnaziv3.Enabled = false;
@@ -76,53 +77,53 @@ namespace WinFormsApp3
             {
                 "Prva beogradska gimnazija",
                 "Druga beogradska gimnazija",
-                "Treća beogradska gimnazija",
-                "Četvrta beogradska gimnazija",
+                "Treca beogradska gimnazija",
+                "Cetvrta beogradska gimnazija",
                 "Peta beogradska gimnazija",
-                "Šesta beogradska gimnazija",
+                "Sesta beogradska gimnazija",
                 "Sedma beogradska gimnazija",
                 "Osma beogradska gimnazija",
-                "Deveta gimnazija Mihailo Petrović Alas",
+                "Deveta gimnazija Mihailo Petrovic Alas",
                 "Deseta gimnazija Mihajlo Pupin",
                 "Trinaesta beogradska gimnazija",
-                "Četrnaesta beogradska gimnazija",
+                "Cetrnaesta beogradska gimnazija",
                 "Petnaesta beogradska gimnazija",
-                "Matematička gimnazija",
-                "Filološka gimnazija",
-                "Prva ekonomska škola",
-                "Druga ekonomska škola",
-                "Pravno-poslovna škola Beograd",
-                "Elektrotehnička škola Nikola Tesla",
-                "Elektrotehnička škola Rade Končar",
+                "Matematicka gimnazija",
+                "Filoloska gimnazija",
+                "Prva ekonomska skola",
+                "Druga ekonomska skola",
+                "Pravno-poslovna skola Beograd",
+                "Elektrotehnicka skola Nikola Tesla",
+                "Elektrotehnicka skola Rade Koncar",
                 "Vazduhoplovna akademija",
-                "Medicinska škola Zvezdara",
-                "Medicinska škola Beograd",
-                "Srednja farmaceutsko-fizioterapeutska škola",
-                "Građevinska tehnička škola Branko Žeželj",
-                "Arhitektonska tehnička škola",
-                "Mašinska škola Radoje Dakić",
-                "Saobraćajno-tehnička škola Zemun",
-                "PTT škola",
-                "Trgovačka škola Beograd",
-                "Ugostiteljsko-turistička škola",
-                "Škola za dizajn",
+                "Medicinska skola Zvezdara",
+                "Medicinska skola Beograd",
+                "Srednja farmaceutsko-fizioterapeutska skola",
+                "Građevinska tehnicka skola Branko zezelj",
+                "Arhitektonska tehnicka skola",
+                "Masinska skola Radoje Dakic",
+                "Saobracajno-tehnicka skola Zemun",
+                "PTT skola",
+                "Trgovacka skola Beograd",
+                "Ugostiteljsko-turisticka skola",
+                "Skola za dizajn",
                 "Tehnoart Beograd",
-                "Hemijsko-prehrambena tehnološka škola",
-                "Grafička škola"
+                "Hemijsko-prehrambena tehnoloska skola",
+                "Graficka skola"
             });
 
             comboBoxtip.Items.AddRange(new string[]
             {
-                "Opšta",
-                "Stručna",
-                "Umetnička"
+                "Opsta",
+                "Strucna",
+                "Umetnicka"
             });
 
             comboBoxprofiltip.Items.AddRange(new string[]
             {
-                "Opšta",
-                "Stručna",
-                "Umetnička"
+                "Opsta",
+                "Strucna",
+                "Umetnicka"
             });
         }
 
@@ -144,7 +145,7 @@ namespace WinFormsApp3
             {
                 foreach (Profil p in profili)
                 {
-                    string linija = $"{p.profil};{p.tip};{p.naziv1};{p.naziv2};{p.naziv3};{p.jezik}";
+                    string linija = $"{p.profil};{p.tip};{p.jezik};{p.naziv1};{p.naziv2};{p.naziv3}";
                     sw.WriteLine(linija);
                 }
             }
@@ -178,8 +179,9 @@ namespace WinFormsApp3
                                                              "Slovacki jezik i knjizevnost",
                                                              "Hrvatski jezik i knjizevnost"});
             comboBoxnaziv2.Items.AddRange(new string[] { "Matematika" });
+            comboBoxnaziv2.SelectedIndex = 0;
 
-            if (comboBoxtip.SelectedItem.ToString() == "Opšta")
+            if (comboBoxtip.SelectedItem.ToString() == "Opsta")
             {
                 comboBoxnaziv3.Items.AddRange(new string[] { "Biologija",
                                                              "Geografija",
@@ -194,66 +196,66 @@ namespace WinFormsApp3
                                                              "Hemija",
                                                              "Spanski jezik" });
             }
-            else if (comboBoxtip.SelectedItem.ToString() == "Stručna")
+            else if (comboBoxtip.SelectedItem.ToString() == "Strucna")
             {
                 comboBoxnaziv3.Items.AddRange(new string[] { "Zootehnicar",
-                                                            "Tehnicar za biotehnologiju",
-                                                            "Tehnicar poljoprivredne tehnike",
-                                                            "Tehnicar hortikuture",
-                                                            "Tehnicar za pejzaznu arhitekturu",
-                                                            "Sumarski tehnicar",
-                                                            "Geoloski tehnicar za geotehniku i hidrogeologiju",
-                                                            "Geoloski tehnicar za istrazivanje mineralnih sirovina",
-                                                            "Rudarski tehnicar",
-                                                            "Rudarski tehnicar za pripremu mineralnih sirovina",
-                                                            "Brodomasinski tehnicar",
-                                                            "Masinski tehnicar za kompjutersko konstruisanje",
-                                                            "Masinski tehnicar merne i regulacione tehnike",
-                                                            "Masinski tehnicar motornih vozila",
-                                                            "Tehnicar grejanja i klimatizacije",
-                                                            "Tehnicar za kompjutersko upravljanje (CNC) masina",
-                                                            "Tehnicar za robotiku",
-                                                            "Tehnicar masinske energetike",
-                                                            "Tehnicar optike",
-                                                            "Elektrotehnicar automatike",
-                                                            "Elektrotehnicar elektromotornih pogona",
-                                                            "Elektrotehnicar elektronike",
-                                                            "Elektrotehnicar energetike",
-                                                            "Elektrotehnicar za termicke i rashladne uredjaje",
-                                                            "Elektrotehnicar informacionih tehnologija",
-                                                            "Elektrotehnicar procesnog upravljanja",
-                                                            "Elektrotehnicar racunara",
-                                                            "Tehnicar graficke dorade",
-                                                            "Tehnicar za zastitu zivotne sredine",
-                                                            "Tehnicar za industrijsku farmaceutsku tehnologiju",
-                                                            "Tehnicar stampе",
-                                                            "Fotograf",
-                                                            "Hemijski laborant",
-                                                            "Hemijsko-tehnoloski tehnicar",
-                                                            "Tekstilni tehnicar",
-                                                            "Gradjevinski tehnicar za laboratorijska ispitivanja",
-                                                            "Gradjevinski tehnicar za hidrogradnju",
-                                                            "Izvodjac instalaterskih i zavrsnih gradjevinskih radova",
-                                                            "Nauticki tehnicar - recni smer",
-                                                            "Saobracajno-transportni tehnicar",
-                                                            "Tehnicar vuce",
-                                                            "Tehnicar PTT saobracaja",
-                                                            "Tehnicar unutrasnjeg transporta",
-                                                            "Transportni komercialista",
-                                                            "Kulinarskі tehnicar",
-                                                            "Ugostiteljski tehnicar",
-                                                            "Ekonomski tehnicar",
-                                                            "Finansijski tehnicar",
-                                                            "Carinski tehnicar",
-                                                            "Ginekolosko-akuserska sestra",
-                                                            "Zubni tehnicar",
-                                                            "Medicinska sestra - vaspitac",
-                                                            "Pedijatrijska sestra - tehnicar",
-                                                            "Sanitarno-ekoloski tehnicar",
-                                                            "Scenski masker i vlasuljаr"});
+"Tehnicar za biotehnologiju",
+"Tehnicar poljoprivredne tehnike",
+"Tehnicar hortikulture",
+"Tehnicar za pejzaznu arhitekturu",
+"Sumarski tehnicar",
+"Geoloski tehnicar za geotehniku i hidrogeologiju",
+"Geoloski tehnicar za istrazivanje mineralnih sirovina",
+"Rudarski tehnicar",
+"Rudarski tehnicar za pripremu mineralnih sirovina",
+"Brodomasinski tehnicar",
+"Masinski tehnicar za kompjutersko konstruisanje",
+"Masinski tehnicar merne i regulacione tehnike",
+"Masinski tehnicar motornih vozila",
+"Tehnicar grejanja i klimatizacije",
+"Tehnicar za kompjutersko upravljanje (CNC) masina",
+"Tehnicar za robotiku",
+"Tehnicar masinske energetike",
+"Tehnicar optike",
+"Elektrotehnicar automatike",
+"Elektrotehnicar elektromotornih pogona",
+"Elektrotehnicar elektronike",
+"Elektrotehnicar energetike",
+"Elektrotehnicar za termicke i rashladne uređaje",
+"Elektrotehnicar informacionih tehnologija",
+"Elektrotehnicar procesnog upravljanja",
+"Elektrotehnicar racunara",
+"Tehnicar graficke dorade",
+"Tehnicar za zastitu zivotne sredine",
+"Tehnicar za industrijsku farmaceutsku tehnologiju",
+"Tehnicar stampe",
+"Fotograf",
+"Hemijski laborant",
+"Hemijsko-tehnoloski tehnicar",
+"Tekstilni tehnicar",
+"Građevinski tehnicar za laboratorijska ispitivanja",
+"Građevinski tehnicar za hidrogradnju",
+"Izvođac instalaterskih i zavrsnih građevinskih radova",
+"Nauticki tehnicar - recni smer",
+"Saobracajno-transportni tehnicar",
+"Tehnicar vuce",
+"Tehnicar PTT saobracaja",
+"Tehnicar unutrasnjeg transporta",
+"Transportni komercijalista",
+"Kulinarski tehnicar",
+"Ugostiteljski tehnicar",
+"Ekonomski tehnicar",
+"Finansijski tehnicar",
+"Carinski tehnicar",
+"Ginekolosko-akuserska sestra",
+"Zubni tehnicar",
+"Medicinska sestra - vaspitac",
+"Pedijatrijska sestra - tehnicar",
+"Sanitarno-ekoloski tehnicar",
+"Scenski masker i vlasuljar"});
             }
 
-            else if (comboBoxtip.SelectedItem.ToString() == "Umetnička")
+            else if (comboBoxtip.SelectedItem.ToString() == "Umetnicka")
             {
 
                 comboBoxnaziv3.Items.AddRange(new string[] { "Soleđo", "Harmonija" });
@@ -308,6 +310,19 @@ namespace WinFormsApp3
 
         private void buttonpotvrdi_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBoxime.Text) ||
+            string.IsNullOrWhiteSpace(textBoxprezime.Text) ||
+            comboBoxskola.SelectedIndex == -1 ||
+            comboBoxodeljenje.SelectedIndex == -1 ||
+            comboBoxjezik.SelectedIndex == -1 ||
+            comboBoxtip.SelectedIndex == -1 ||
+            comboBoxnaziv1.SelectedIndex == -1 ||
+            comboBoxnaziv2.SelectedIndex == -1 ||
+            comboBoxnaziv3.SelectedIndex == -1)
+            {
+                MessageBox.Show("Sva polja moraju biti popunjena!", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             Ucenik ucenik = new Ucenik();
             ucenik.ime = textBoxime.Text;
             ucenik.prezime = textBoxprezime.Text;
@@ -333,8 +348,27 @@ namespace WinFormsApp3
             comboBoxnaziv1.SelectedIndex = -1;
             comboBoxnaziv2.SelectedIndex = -1;
             comboBoxnaziv3.SelectedIndex = -1;
+            cmbIzaberiProfil.SelectedIndex = 0;
+            dataGridViewUcenici.ClearSelection();
         }
 
+        private void buttonNovi_Click(object sender, EventArgs e)
+        {
+            selektovaniIndeksUcenika = -1;
+            buttonSacuvajIzmenu.Enabled = false;
+            dataGridViewUcenici.ClearSelection();
+
+            textBoxime.Text = "";
+            textBoxprezime.Text = "";
+            comboBoxodeljenje.SelectedIndex = -1;
+            comboBoxskola.SelectedIndex = -1;
+            comboBoxjezik.SelectedIndex = -1;
+            comboBoxtip.SelectedIndex = -1;
+            comboBoxnaziv1.SelectedIndex = -1;
+            comboBoxnaziv2.SelectedIndex = -1;
+            comboBoxnaziv3.SelectedIndex = -1;
+            cmbIzaberiProfil.SelectedIndex = 0;
+        }
         private void buttonobrisi_Click(object sender, EventArgs e)
         {
 
@@ -352,6 +386,8 @@ namespace WinFormsApp3
                 dataGridViewUcenici.Rows.RemoveAt(selektovaniIndeks);
                 Sacuvaju();
             }
+            selektovaniIndeksUcenika = -1;
+            buttonSacuvajIzmenu.Enabled = false;
             textBoxime.Text = "";
             textBoxprezime.Text = "";
             comboBoxodeljenje.SelectedIndex = -1;
@@ -361,6 +397,7 @@ namespace WinFormsApp3
             comboBoxnaziv2.SelectedIndex = -1;
             comboBoxnaziv3.SelectedIndex = -1;
             comboBoxskola.SelectedIndex = -1;
+            cmbIzaberiProfil.SelectedIndex = 0;
         }
 
         private void comboBoxprofiltip_SelectedIndexChanged(object sender, EventArgs e)
@@ -392,7 +429,7 @@ namespace WinFormsApp3
                                                              "Hrvatski jezik i knjizevnost"});
             comboBoxprofilnaziv2.Items.AddRange(new string[] { "Matematika" });
 
-            if (comboBoxprofiltip.SelectedItem.ToString() == "Opšta")
+            if (comboBoxprofiltip.SelectedItem.ToString() == "Opsta")
             {
                 comboBoxprofilnaziv3.Items.AddRange(new string[] { "Biologija",
                                                              "Geografija",
@@ -407,65 +444,65 @@ namespace WinFormsApp3
                                                              "Hemija",
                                                              "Spanski jezik" });
             }
-            else if (comboBoxprofiltip.SelectedItem.ToString() == "Stručna")
+            else if (comboBoxprofiltip.SelectedItem.ToString() == "Strucna")
             {
                 comboBoxprofilnaziv3.Items.AddRange(new string[] { "Zootehnicar",
-                                                            "Tehnicar za biotehnologiju",
-                                                            "Tehnicar poljoprivredne tehnike",
-                                                            "Tehnicar hortikuture",
-                                                            "Tehnicar za pejzaznu arhitekturu",
-                                                            "Sumarski tehnicar",
-                                                            "Geoloski tehnicar za geotehniku i hidrogeologiju",
-                                                            "Geoloski tehnicar za istrazivanje mineralnih sirovina",
-                                                            "Rudarski tehnicar",
-                                                            "Rudarski tehnicar za pripremu mineralnih sirovina",
-                                                            "Brodomasinski tehnicar",
-                                                            "Masinski tehnicar za kompjutersko konstruisanje",
-                                                            "Masinski tehnicar merne i regulacione tehnike",
-                                                            "Masinski tehnicar motornih vozila",
-                                                            "Tehnicar grejanja i klimatizacije",
-                                                            "Tehnicar za kompjutersko upravljanje (CNC) masina",
-                                                            "Tehnicar za robotiku",
-                                                            "Tehnicar masinske energetike",
-                                                            "Tehnicar optike",
-                                                            "Elektrotehnicar automatike",
-                                                            "Elektrotehnicar elektromotornih pogona",
-                                                            "Elektrotehnicar elektronike",
-                                                            "Elektrotehnicar energetike",
-                                                            "Elektrotehnicar za termicke i rashladne uredjaje",
-                                                            "Elektrotehnicar informacionih tehnologija",
-                                                            "Elektrotehnicar procesnog upravljanja",
-                                                            "Elektrotehnicar racunara",
-                                                            "Tehnicar graficke dorade",
-                                                            "Tehnicar za zastitu zivotne sredine",
-                                                            "Tehnicar za industrijsku farmaceutsku tehnologiju",
-                                                            "Tehnicar stampе",
-                                                            "Fotograf",
-                                                            "Hemijski laborant",
-                                                            "Hemijsko-tehnoloski tehnicar",
-                                                            "Tekstilni tehnicar",
-                                                            "Gradjevinski tehnicar za laboratorijska ispitivanja",
-                                                            "Gradjevinski tehnicar za hidrogradnju",
-                                                            "Izvodjac instalaterskih i zavrsnih gradjevinskih radova",
-                                                            "Nauticki tehnicar - recni smer",
-                                                            "Saobracajno-transportni tehnicar",
-                                                            "Tehnicar vuce",
-                                                            "Tehnicar PTT saobracaja",
-                                                            "Tehnicar unutrasnjeg transporta",
-                                                            "Transportni komercialista",
-                                                            "Kulinarskі tehnicar",
-                                                            "Ugostiteljski tehnicar",
-                                                            "Ekonomski tehnicar",
-                                                            "Finansijski tehnicar",
-                                                            "Carinski tehnicar",
-                                                            "Ginekolosko-akuserska sestra",
-                                                            "Zubni tehnicar",
-                                                            "Medicinska sestra - vaspitac",
-                                                            "Pedijatrijska sestra - tehnicar",
-                                                            "Sanitarno-ekoloski tehnicar",
-                                                            "Scenski masker i vlasuljаr"});
+"Tehnicar za biotehnologiju",
+"Tehnicar poljoprivredne tehnike",
+"Tehnicar hortikulture",
+"Tehnicar za pejzaznu arhitekturu",
+"Sumarski tehnicar",
+"Geoloski tehnicar za geotehniku i hidrogeologiju",
+"Geoloski tehnicar za istrazivanje mineralnih sirovina",
+"Rudarski tehnicar",
+"Rudarski tehnicar za pripremu mineralnih sirovina",
+"Brodomasinski tehnicar",
+"Masinski tehnicar za kompjutersko konstruisanje",
+"Masinski tehnicar merne i regulacione tehnike",
+"Masinski tehnicar motornih vozila",
+"Tehnicar grejanja i klimatizacije",
+"Tehnicar za kompjutersko upravljanje (CNC) masina",
+"Tehnicar za robotiku",
+"Tehnicar masinske energetike",
+"Tehnicar optike",
+"Elektrotehnicar automatike",
+"Elektrotehnicar elektromotornih pogona",
+"Elektrotehnicar elektronike",
+"Elektrotehnicar energetike",
+"Elektrotehnicar za termicke i rashladne uređaje",
+"Elektrotehnicar informacionih tehnologija",
+"Elektrotehnicar procesnog upravljanja",
+"Elektrotehnicar racunara",
+"Tehnicar graficke dorade",
+"Tehnicar za zastitu zivotne sredine",
+"Tehnicar za industrijsku farmaceutsku tehnologiju",
+"Tehnicar stampe",
+"Fotograf",
+"Hemijski laborant",
+"Hemijsko-tehnoloski tehnicar",
+"Tekstilni tehnicar",
+"Građevinski tehnicar za laboratorijska ispitivanja",
+"Građevinski tehnicar za hidrogradnju",
+"Izvođac instalaterskih i zavrsnih građevinskih radova",
+"Nauticki tehnicar - recni smer",
+"Saobracajno-transportni tehnicar",
+"Tehnicar vuce",
+"Tehnicar PTT saobracaja",
+"Tehnicar unutrasnjeg transporta",
+"Transportni komercijalista",
+"Kulinarski tehnicar",
+"Ugostiteljski tehnicar",
+"Ekonomski tehnicar",
+"Finansijski tehnicar",
+"Carinski tehnicar",
+"Ginekolosko-akuserska sestra",
+"Zubni tehnicar",
+"Medicinska sestra - vaspitac",
+"Pedijatrijska sestra - tehnicar",
+"Sanitarno-ekoloski tehnicar",
+"Scenski masker i vlasuljar"});
             }
-            else if (comboBoxprofiltip.SelectedItem.ToString() == "Umetnička")
+            else if (comboBoxprofiltip.SelectedItem.ToString() == "Umetnicka")
             {
                 comboBoxprofilnaziv3.Items.AddRange(new string[] { "Soleđo", "Harmonija" });
             }
@@ -522,13 +559,13 @@ namespace WinFormsApp3
             dataGridViewUcenici.ColumnCount = 9;
             dataGridViewUcenici.Columns[0].Name = "Ime";
             dataGridViewUcenici.Columns[1].Name = "Prezime";
-            dataGridViewUcenici.Columns[2].Name = "Škola";
+            dataGridViewUcenici.Columns[2].Name = "skola";
             dataGridViewUcenici.Columns[3].Name = "Odeljenje";
             dataGridViewUcenici.Columns[4].Name = "Tip mature";
             dataGridViewUcenici.Columns[5].Name = "Jezik";
             dataGridViewUcenici.Columns[6].Name = "Prvi predmet";
             dataGridViewUcenici.Columns[7].Name = "Drugi predmet";
-            dataGridViewUcenici.Columns[8].Name = "Treći predmet";
+            dataGridViewUcenici.Columns[8].Name = "Treci predmet";
 
             dataGridViewProfil.ColumnCount = 6;
             dataGridViewProfil.Columns[0].Name = "Naziv";
@@ -536,7 +573,7 @@ namespace WinFormsApp3
             dataGridViewProfil.Columns[2].Name = "Jezik";
             dataGridViewProfil.Columns[3].Name = "Prvi predmet";
             dataGridViewProfil.Columns[4].Name = "Drugi predmet";
-            dataGridViewProfil.Columns[5].Name = "Treći predmet";
+            dataGridViewProfil.Columns[5].Name = "Treci predmet";
 
             if (File.Exists("profili.csv"))
             {
@@ -549,7 +586,7 @@ namespace WinFormsApp3
 
                     if (podaci1.Length == 6)
                     {
-                        dataGridViewProfil.Rows.Add(podaci1);
+                        dataGridViewProfil.Rows.Add(podaci1[0], podaci1[1], podaci1[2], podaci1[3], podaci1[4], podaci1[5]);
                         Profil p = new Profil();
                         p.profil = podaci1[0];
                         p.tip = podaci1[1];
@@ -572,7 +609,7 @@ namespace WinFormsApp3
 
                     if (podaci.Length == 9)
                     {
-                        dataGridViewUcenici.Rows.Add(podaci);
+                        dataGridViewUcenici.Rows.Add(podaci[0], podaci[1], podaci[2], podaci[3], podaci[4], podaci[5], podaci[6], podaci[7], podaci[8]);
                         Ucenik u = new Ucenik();
                         u.ime = podaci[0];
                         u.prezime = podaci[1];
@@ -589,30 +626,97 @@ namespace WinFormsApp3
                 }
             }
             OsveziComboBoxProfila();
+            cmbIzaberiProfil.SelectedIndex = 0;
+            dataGridViewUcenici.ClearSelection();
         }
+        private int selektovaniIndeksUcenika = -1;
         private void dataGridViewUcenici_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridViewUcenici.SelectedRows.Count > 0)
+            if (dataGridViewUcenici.SelectedRows.Count == 0) return;
+
+            DataGridViewRow izabraniRed = dataGridViewUcenici.SelectedRows[0];
+            if (izabraniRed.IsNewRow || izabraniRed.Cells[0].Value == null) return;
+
+            int x = izabraniRed.Index;
+            if (x >= ucenici.Count) return;
+
+            selektovaniIndeksUcenika = x;
+            buttonSacuvajIzmenu.Enabled = true;
+
+            Ucenik u = ucenici[x];
+
+            textBoxime.Text = u.ime;
+            textBoxprezime.Text = u.prezime;
+            comboBoxskola.SelectedIndex = comboBoxskola.FindStringExact(u.skola);
+            comboBoxodeljenje.SelectedIndex = comboBoxodeljenje.FindStringExact(u.odeljenje);
+            comboBoxjezik.SelectedIndex = comboBoxjezik.FindStringExact(u.jezik);
+            comboBoxtip.SelectedIndex = comboBoxtip.FindStringExact(u.tip);
+            comboBoxnaziv1.SelectedIndex = comboBoxnaziv1.FindStringExact(u.naziv1);
+            comboBoxnaziv2.SelectedIndex = comboBoxnaziv2.FindStringExact(u.naziv2);
+            comboBoxnaziv3.SelectedIndex = comboBoxnaziv3.FindStringExact(u.naziv3);
+        }
+        private void buttonSacuvajIzmenu_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxime.Text) ||
+                string.IsNullOrWhiteSpace(textBoxprezime.Text) ||
+                comboBoxskola.SelectedIndex == -1 ||
+                comboBoxodeljenje.SelectedIndex == -1 ||
+                comboBoxjezik.SelectedIndex == -1 ||
+                comboBoxtip.SelectedIndex == -1 ||
+                comboBoxnaziv1.SelectedIndex == -1 ||
+                comboBoxnaziv2.SelectedIndex == -1 ||
+                comboBoxnaziv3.SelectedIndex == -1)
             {
-                DataGridViewRow izabraniRed = dataGridViewUcenici.SelectedRows[0];
-                if (izabraniRed.Cells[0].Value != null)
-                {
-                    textBoxime.Text = izabraniRed.Cells[0].Value.ToString();
-                    textBoxprezime.Text = izabraniRed.Cells[1].Value.ToString();
-                    comboBoxskola.Text = izabraniRed.Cells[2].Value.ToString();
-                    comboBoxodeljenje.Text = izabraniRed.Cells[3].Value.ToString();
-                    comboBoxtip.Text = izabraniRed.Cells[4].Value.ToString();
-                    comboBoxjezik.Text = izabraniRed.Cells[5].Value.ToString();
-                    comboBoxnaziv1.Text = izabraniRed.Cells[6].Value.ToString();
-                    comboBoxnaziv2.Text = izabraniRed.Cells[7].Value.ToString();
-                    comboBoxnaziv3.Text = izabraniRed.Cells[8].Value.ToString();
-                }
+                MessageBox.Show("Sva polja moraju biti popunjena!", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+            if (selektovaniIndeksUcenika < 0 || selektovaniIndeksUcenika >= ucenici.Count) return;
+
+            Ucenik u = ucenici[selektovaniIndeksUcenika];
+            u.ime = textBoxime.Text;
+            u.prezime = textBoxprezime.Text;
+            u.skola = comboBoxskola.Text;
+            u.odeljenje = comboBoxodeljenje.Text;
+            u.jezik = comboBoxjezik.Text;
+            u.tip = comboBoxtip.Text;
+            u.naziv1 = comboBoxnaziv1.Text;
+            u.naziv2 = comboBoxnaziv2.Text;
+            u.naziv3 = comboBoxnaziv3.Text;
+
+            var red = dataGridViewUcenici.Rows[selektovaniIndeksUcenika];
+            red.Cells[0].Value = u.ime;
+            red.Cells[1].Value = u.prezime;
+            red.Cells[2].Value = u.skola;
+            red.Cells[3].Value = u.odeljenje;
+            red.Cells[4].Value = u.tip;
+            red.Cells[5].Value = u.jezik;
+            red.Cells[6].Value = u.naziv1;
+            red.Cells[7].Value = u.naziv2;
+            red.Cells[8].Value = u.naziv3;
+
+            Sacuvaju();
+
+            selektovaniIndeksUcenika = -1;
+            buttonSacuvajIzmenu.Enabled = false;
+            dataGridViewUcenici.ClearSelection();
+
+            textBoxime.Text = "";
+            textBoxprezime.Text = "";
+            comboBoxodeljenje.SelectedIndex = -1;
+            comboBoxskola.SelectedIndex = -1;
+            comboBoxjezik.SelectedIndex = -1;
+            comboBoxtip.SelectedIndex = -1;
+            comboBoxnaziv1.SelectedIndex = -1;
+            comboBoxnaziv2.SelectedIndex = -1;
+            comboBoxnaziv3.SelectedIndex = -1;
+            cmbIzaberiProfil.SelectedIndex = 0;
         }
 
         private void OsveziComboBoxProfila()
         {
             cmbIzaberiProfil.Items.Clear();
+
+            cmbIzaberiProfil.Items.Add("---");
 
             foreach (DataGridViewRow red in dataGridViewProfil.Rows)
             {
@@ -623,67 +727,37 @@ namespace WinFormsApp3
                     cmbIzaberiProfil.Items.Add(nazivProfila);
                 }
             }
+            cmbIzaberiProfil.SelectedIndex = 0;
         }
         private void cmbIzaberiProfil_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (!cmbIzaberiProfil.Focused) return;
             if (cmbIzaberiProfil.SelectedIndex == -1) return;
 
             string izabraniProfil = cmbIzaberiProfil.SelectedItem.ToString();
-            foreach (DataGridViewRow row in dataGridViewProfil.Rows)
+
+            if (izabraniProfil == "---")
             {
-                string trenutniProfil = row.Cells[0].Value?.ToString();
-                if (trenutniProfil == izabraniProfil)
-                {
-                    string tipmature = row.Cells["Tip mature"].Value?.ToString();
-
-                    if (!string.IsNullOrWhiteSpace(tipmature))
-                    {
-                        comboBoxtip.SelectedItem = tipmature;
-                    }
-                    string jezikmature = row.Cells["Jezik"].Value?.ToString();
-
-                    if (!string.IsNullOrWhiteSpace(jezikmature))
-                    {
-                        comboBoxtip.SelectedItem = jezikmature;
-                    }
-                    string prvimature = row.Cells["Prvi predmet"].Value?.ToString();
-
-                    if (!string.IsNullOrWhiteSpace(prvimature))
-                    {
-                        comboBoxtip.SelectedItem = prvimature;
-                    }
-                    string drugimature = row.Cells["Drugi predmet"].Value?.ToString();
-
-                    if (!string.IsNullOrWhiteSpace(drugimature))
-                    {
-                        comboBoxtip.SelectedItem = drugimature;
-                    }
-                    string trecimature = row.Cells["Treci predmet"].Value?.ToString();
-
-                    if (!string.IsNullOrWhiteSpace(trecimature))
-                    {
-                        comboBoxtip.SelectedItem = trecimature;
-                    }
-                    break;
-                }
+                comboBoxtip.SelectedIndex = -1;
+                comboBoxjezik.SelectedIndex = -1;
+                comboBoxnaziv1.SelectedIndex = -1;
+                comboBoxnaziv2.SelectedIndex = -1;
+                comboBoxnaziv3.SelectedIndex = -1;
+                return;
             }
+
+            Profil nadjenProfil = profili.FirstOrDefault(p => p.profil.Trim() == izabraniProfil.Trim());
+
+            if (nadjenProfil == null) return;
+
+            comboBoxtip.SelectedIndex = comboBoxtip.FindStringExact(nadjenProfil.tip);
+
+            comboBoxjezik.SelectedIndex = comboBoxjezik.FindStringExact(nadjenProfil.jezik);
+            comboBoxnaziv1.SelectedIndex = comboBoxnaziv1.FindStringExact(nadjenProfil.naziv1);
+            comboBoxnaziv2.SelectedIndex = comboBoxnaziv2.FindStringExact(nadjenProfil.naziv2);
+            comboBoxnaziv3.SelectedIndex = comboBoxnaziv3.FindStringExact(nadjenProfil.naziv3);
         }
-        private void dataGridViewProfil_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dataGridViewProfil.SelectedRows.Count > 0)
-            {
-                DataGridViewRow izabraniRed = dataGridViewProfil.SelectedRows[0];
-                if (izabraniRed.Cells[0].Value != null)
-                {
-                    textBoxprofil.Text = izabraniRed.Cells[0].Value.ToString();
-                    comboBoxtip.Text = izabraniRed.Cells[1].Value.ToString();
-                    comboBoxjezik.Text = izabraniRed.Cells[2].Value.ToString();
-                    comboBoxnaziv1.Text = izabraniRed.Cells[3].Value.ToString();
-                    comboBoxnaziv2.Text = izabraniRed.Cells[4].Value.ToString();
-                    comboBoxnaziv3.Text = izabraniRed.Cells[5].Value.ToString();
-                }
-            }
-        }
+
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
